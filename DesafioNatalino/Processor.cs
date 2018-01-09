@@ -2,7 +2,6 @@
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
-
 namespace DesafioNatalino
 {
     public class Processor
@@ -22,7 +21,6 @@ namespace DesafioNatalino
 
             channel.QueueDeclare("hello", false, false, false, null);
             
-
             channel.ExchangeDeclare("exchangeTest", "fanout", true);
 
             channel.QueueBind("hello", "exchangeTest", "rota1");
@@ -33,7 +31,7 @@ namespace DesafioNatalino
             var consumer = new EventingBasicConsumer(channel);
             consumer.Received += (model, ea) =>
             {
-                //var body =
+                
             };
         }
     }

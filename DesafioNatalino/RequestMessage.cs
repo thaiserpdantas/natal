@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace DesafioNatalino
+﻿namespace DesafioNatalino
 {
     public class RequestMessage
     {
+        public string Exchange { get; set; }
+        public string Route { get; set; }
         public string Message { get; set; }
     }
 }
